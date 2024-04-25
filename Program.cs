@@ -351,65 +351,144 @@ namespace ConsoleApp6
     {
         static void Main(string[] args)
         {
-            //1
-            Builder bob = new Builder("John", 35, "American", "skyscraper construction", 10);
-            bob.Introduce();
-            bob.Build();
-            bob.Hammer();
+            //    //1
+            //    Builder bob = new Builder("John", 35, "American", "skyscraper construction", 10);
+            //    bob.Introduce();
+            //    bob.Build();
+            //    bob.Hammer();
+            //    Console.WriteLine();
+
+            //    Sailor jack = new Sailor("Jack", 40, "British", "container ship", "across the Pacific");
+            //    jack.Introduce();
+            //    jack.Sail();
+            //    jack.SwabDeck();
+            //    Console.WriteLine();
+
+            //    Pilot luke = new Pilot("James", 30, "Canadian", "fighter jet", "commercial");
+            //    luke.Introduce();
+            //    luke.Fly();
+            //    luke.CheckInstruments();
+            //    Console.WriteLine();
+
+            //    //2
+            //    Passport passport = new Passport("Darion Jobs", "AB123456", "DEU", new DateTime(2000, 12, 16));
+            //    Console.WriteLine("Passport Details:");
+            //    passport.PrintDetails();
+
+            //    ForeignPassport foreignPassport = new ForeignPassport("Olia Yassuf", "XYZ789", "UA", new DateTime(2005, 4, 16), "Valid visa for Europe", "Ukraine");
+            //    Console.WriteLine("\nForeign Passport Details:");
+            //    foreignPassport.PrintDetails();
+            //    Console.WriteLine();
+            //    //3
+            //    Tiger tigger = new Tiger("Tigger", 5, "black stripes");
+            //    tigger.Introduce();
+            //    tigger.Hunt();
+            //    tigger.Move();
+
+            //    Kangaroo joey = new Kangaroo("Joey", 3, 2.5);
+            //    joey.Introduce();
+            //    joey.Jump();
+            //    joey.Move();
+
+            //    Crocodile crocky = new Crocodile("Crocky", 10, "swamp");
+            //    crocky.Introduce();
+            //    crocky.Swim();
+            //    crocky.Move();
+
+            //    //4
+            //    Shape[] shapes = new Shape[]
+            //{
+            //    new Rectangle("Rectangle", 5, 4),
+            //    new Circle("Circle", 3),
+            //    new RightTriangle("Right Triangle", 6, 3),
+            //    new Trapezoid("Trapezoid", 5, 3, 4)
+            //};
+
+            //    foreach (var shape in shapes)
+            //    {
+            //        shape.Draw();
+            //        shape.PrintInfo();
+            //        Console.WriteLine();
+            //    }
+
+            //HW
+            Console.WriteLine("|||||||||||||||||||1|||||||||||||||||||");
+            Product product = new Product("Phone", 500, 50);
+            product.DisplayDetails();
+
+            product.DecreasePrice(100, 25);
+            product.DisplayDetails();
+            Console.WriteLine("|||||||||||||||||||2|||||||||||||||||||");
+
+            Device kettle = new Kettle("Kettle");
+            kettle.Show();
+            kettle.Sound();
+            kettle.Desc();
+
             Console.WriteLine();
 
-            Sailor jack = new Sailor("Jack", 40, "British", "container ship", "across the Pacific");
-            jack.Introduce();
-            jack.Sail();
-            jack.SwabDeck();
+            Device microwave = new Microwave("Microwave");
+            microwave.Show();
+            microwave.Sound();
+            microwave.Desc();
+
             Console.WriteLine();
 
-            Pilot luke = new Pilot("James", 30, "Canadian", "fighter jet", "commercial");
-            luke.Introduce();
-            luke.Fly();
-            luke.CheckInstruments();
+            Device car = new Car("Car");
+            car.Show();
+            car.Sound();
+            car.Desc();
+
             Console.WriteLine();
 
-            //2
-            Passport passport = new Passport("Darion Jobs", "AB123456", "DEU", new DateTime(2000, 12, 16));
-            Console.WriteLine("Passport Details:");
-            passport.PrintDetails();
+            Device steamboat = new Steamboat("Steamboat");
+            steamboat.Show();
+            steamboat.Sound();
+            steamboat.Desc();
+            Console.WriteLine("|||||||||||||||||||3|||||||||||||||||||");
 
-            ForeignPassport foreignPassport = new ForeignPassport("Olia Yassuf", "XYZ789", "UA", new DateTime(2005, 4, 16), "Valid visa for Europe", "Ukraine");
-            Console.WriteLine("\nForeign Passport Details:");
-            foreignPassport.PrintDetails();
+            MusicalInstrument violin = new Violin("Violin");
+            violin.Show();
+            violin.Sound();
+            violin.Desc();
+            violin.History();
+
             Console.WriteLine();
-            //3
-            Tiger tigger = new Tiger("Tigger", 5, "black stripes");
-            tigger.Introduce();
-            tigger.Hunt();
-            tigger.Move();
 
-            Kangaroo joey = new Kangaroo("Joey", 3, 2.5);
-            joey.Introduce();
-            joey.Jump();
-            joey.Move();
+            MusicalInstrument trombone = new Trombone("Trombone");
+            trombone.Show();
+            trombone.Sound();
+            trombone.Desc();
+            trombone.History();
 
-            Crocodile crocky = new Crocodile("Crocky", 10, "swamp");
-            crocky.Introduce();
-            crocky.Swim();
-            crocky.Move();
+            Console.WriteLine();
 
-            //4
-            Shape[] shapes = new Shape[]
-        {
-            new Rectangle("Rectangle", 5, 4),
-            new Circle("Circle", 3),
-            new RightTriangle("Right Triangle", 6, 3),
-            new Trapezoid("Trapezoid", 5, 3, 4)
-        };
+            MusicalInstrument ukulele = new Ukulele("Ukulele");
+            ukulele.Show();
+            ukulele.Sound();
+            ukulele.Desc();
+            ukulele.History();
 
-            foreach (var shape in shapes)
-            {
-                shape.Draw();
-                shape.PrintInfo();
-                Console.WriteLine();
-            }
+            Console.WriteLine();
+
+            MusicalInstrument cello = new Cello("Cello");
+            cello.Show();
+            cello.Sound();
+            cello.Desc();
+            cello.History();
+            Console.WriteLine("|||||||||||||||||||4|||||||||||||||||||");
+
+            Worker president = new President("Olia Yassuf");
+            president.Print();
+
+            Worker security = new Security("Olena Yassuf");
+            security.Print();
+
+            Worker manager = new Manager("Tetyana Paldadenko");
+            manager.Print();
+
+            Worker engineer = new Engineer("Darion Jobs");
+            engineer.Print();
         }
     }
 }
